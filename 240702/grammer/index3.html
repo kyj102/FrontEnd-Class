@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 전후문자선택자 예제 -->
+    <title>Document</title>
+    <style>
+      p {
+        counter-increment: rint;
+      }
+      p::before {
+        content: counter(rint) ".";
+      }
+      p::after {
+        content: "-" attr(data-page) "page";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem Ipsum</h1>
+    <p data-page="52">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+      repudiandae neque, quas, iusto delectus quisquam reprehenderit optio
+      molestiae repellendus saepe perspiciatis temporibus. Repellendus iure, cum
+      quos est adipisci laboriosam dolor! Mollitia accusamus ipsa illum
+      laudantium iure quae assumenda. Quam aliquam tempore asperiores voluptates
+      ducimus reprehenderit nihil laudantium reiciendis itaque, ipsam aspernatur
+      veniam numquam voluptatum, minima ea corporis. Ipsum, dignissimos quis.
+    </p>
+    <p data-page="273">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
+      repudiandae ut sequi atque maxime natus magnam earum aliquam omnis iusto
+      voluptatum eaque, ea repellat, quam accusamus est pariatur commodi porro.
+      Optio dignissimos quis eius voluptatem quasi recusandae perferendis
+      fugiat? Fugiat blanditiis voluptatum placeat. Omnis consequatur soluta
+      animi, et aut, sed a nulla consequuntur dolor, tenetur praesentium quas
+      tempore sunt labore! Magni quibusdam laudantium fugiat sit, asperiores
+      quos excepturi dolores, ullam reiciendis, quae amet ut odio? Sed omnis
+      voluptas cum voluptatem quod dolorem fugiat architecto, temporibus
+      tempora, saepe eveniet officia distinctio? Velit id sequi voluptatem
+      facere laboriosam suscipit molestiae error soluta corporis est, optio,
+      eaque inventore ducimus ullam ad nihil eos eum, sit modi repudiandae sint
+      sapiente quod. Aperiam, autem officia!
+    </p>
+  </body>
+</html>
