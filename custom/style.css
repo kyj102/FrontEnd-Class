@@ -69,7 +69,28 @@ a {
 }
 
 #top_contents {
+  position: relative;
   height: 600px;
+}
+
+.top_contents_title {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.45em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
+}
+
+.top_contents_decs {
+  position: absolute;
+  top: 239px;
+  left: 0;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.45em;
 }
 
 #top_banner {
