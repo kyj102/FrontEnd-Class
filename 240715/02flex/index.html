@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery-->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!--slick Slider-->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script defer src="./slick/slick.min.js"></script>
+    <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/b025ba9f1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--custom css & JS-->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- banner:상단부 검은색 바 부분 -->
+        <div class="banner">
+          <ul class="lnb">
+            <li>
+              <!-- em=글꼴 기울임 태그, 강조기능 -->
+              <a href="#none"><em>for</em> member</a>
+            </li>
+            <li>
+              <a href="#none"><em>for</em> client</a>
+            </li>
+            <li>
+              <a href="#none"><em>for</em> inquiries</a>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <div class="logo">
+            <a href="#none"><img src="./img/logo.png" alt="logo" /></a>
+          </div>
+          <ul class="gnb">
+            <li><a href="#"></a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#ranking">RANKING</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#blog">BLOG</a></li>
+          </ul>
+        </nav>
+        <!-- 모바일에서 우측상단 삼단 햄버거버튼 -->
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <main class="intro">
+        <!-- inner:바깥의 전체 너비값에 비례해서 heading값이 한번에 같이 움직일 수 있게끔 만들어준 박스구조 -->
+        <div class="inner">
+          <div class="heading">
+            <h1>The World's Best Cities</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+              dolore similique magni consectetur, ea hic quas
+            </p>
+          </div>
+        </div>
+      </main>
+      <!-- id선택자 따로주는이유 = 상단헤더 gnb눌렀을때 해당 영역으로 바로넘어갈수있도록 -->
+      <section id="about" class="about">
+        <div class="inner">
+          <div class="about_contents">
+            <div class="desc">
+              <h2>About Best Cities in the World</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda, beatae! Deserunt veniam aliquam tenetur commodi
+                tempore adipisci neque aliquid ab ut, repellat perspiciatis illo
+                consequatur possimus repellendus inventore eaque sed.<br /><br />Lorem
+                ipsum dolor sit amet consectetur, adipisicing elit. Expedita ex
+                eum, sequi voluptatibus optio alias delectus nihil pariatur
+                molestiae excepturi asperiores, sunt amet nostrum dignissimos
+                vitae eligendi eius. Repellat, cum.
+              </p>
+              <a href="#none">Visit the Place Information</a>
+            </div>
+            <div class="photo">
+              <img src="./img/about-img-01.jpg" alt="about01" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ranking" class="ranking">
+        <!-- inner라는 div클래스가 레이아웃 그리드 역할을 해줌 -->
+        <div class="inner">
+          <div class="ranking_content">
+            <h2>The Worlds 25 Best Cities of 2024</h2>
+            <div class="items">
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/best-city-01.jpg" alt="city01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">Must go</span>
+                  <h3>London, England</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aspernatur consequatur adipisci modi aliquid dicta pariatur
+                    voluptatum ab, at animi vitae odit nemo est amet incidunt
+                    delectus quis eius consequuntur minima?
+                  </p>
+                  <a class="btn_explore" href="#none"
+                    >Explore <img src="./img/icon-arrow.png" alt="arrow"
+                  /></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/best-city-02.jpg" alt="city02" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge good">Good to go</span>
+                  <h3>NewYork, United States</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aspernatur consequatur adipisci modi aliquid dicta pariatur
+                    voluptatum ab, at animi vitae odit nemo est amet incidunt
+                    delectus quis eius consequuntur minima?
+                  </p>
+                  <a class="btn_explore" href="#none"
+                    >Explore <img src="./img/icon-arrow.png" alt="arrow"
+                  /></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/best-city-03.jpg" alt="city03" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">Good to go</span>
+                  <h3>Paris, France</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aspernatur consequatur adipisci modi aliquid dicta pariatur
+                    voluptatum ab, at animi vitae odit nemo est amet incidunt
+                    delectus quis eius consequuntur minima?
+                  </p>
+                  <a class="btn_explore" href="#none"
+                    >Explore <img src="./img/icon-arrow.png" alt="arrow"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial" class="testimonial">
+        <div class="inner">
+          <div class="testimonial_content">
+            <h2>what <b>our customers</b> are saying?</h2>
+            <hr />
+            <div class="myslider">
+              <div>
+                <p class="client">
+                  <img src="./img/client-01.jpg" alt="clinet01" />
+                  <span> <b>Coding Works</b>Seoul, Korea </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-02.jpg" alt="clinet02" />
+                  <span> <b>Kate Whitney</b>LosAngeles, US </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-03.jpg" alt="clinet03" />
+                  <span> <b>Kelly Muvills</b>NewYork, Us </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-04.jpg" alt="clinet04" />
+                  <span> <b>Oliver</b>California, US </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-05.jpg" alt="clinet05" />
+                  <span> <b>Sophia</b>London, UK </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-06.jpg" alt="clinet06" />
+                  <span> <b>Charlotte</b>Washington, US </span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Earum quisquam ratione possimus id quo provident eveniet
+                  numquam delectus ad perspiciatis sint reprehenderit quas,
+                  soluta voluptate ea quaerat non hic. Esse?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callaction">
+        <!-- heading 이미작 전체너비를 쓰기 때문에 1300으로 고정해둔 inner클래스를 주지 않아도 된다 -->
+        <div class="callcation_heading">
+          <h2>
+            The Most Simple & <b>Powerful Way</b><br />
+            to Book <b>Your Trip</b>
+          </h2>
+          <a href="#none">get early access</a>
+        </div>
+      </section>
+      <section id="blog" class="blog">
+        <div class="inner">
+          <div class="blog_content">
+            <div class="blog_header">
+              <h6>feature article</h6>
+              <h2>can americans visit mexico right now?</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis impedit, deserunt maiores quos quidem illo fugit.
+              </p>
+              <a class="btn_explore" href="#none"
+                >Read More<img src="./img/icon-arrow.png" alt="arrow"
+              /></a>
+            </div>
+            <hr class="divider" />
+            <div class="post_content">
+              <div class="recent_post_items">
+                <h6>most recent</h6>
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/most-recent-01.jpg" alt="recent01" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>world ocean travel</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Rerum beatae soluta excepturi officia, ipsam iste sint.
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/most-recent-02.jpg" alt="recent02" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>come to south korea</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Rerum beatae soluta excepturi officia, ipsam iste sint.
+                      <span>August 29, 2022</span>
+                    </p>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/most-recent-03.jpg" alt="recent03" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>Vietnam & Combodia</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Rerum beatae soluta excepturi officia, ipsam iste sint.
+                      <span>October 8, 2017</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shared_post_items">
+                <h6>most shared</h6>
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/most-shared-01.jpg" alt="shared01" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>event in nyc</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aspernatur, sint repudiandae?
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/most-shared-02.jpg" alt="shared02" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>Festivals</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aspernatur, sint repudiandae?
+                      <span>August 16, 2023</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="festival">
+        <div class="festival_heading">
+          <h3><span>SEE ALL FESTIVALS</span> for the Best Trip Place</h3>
+          <div class="btns">
+            <a href="#none">Mexico Festival</a>
+            <a href="#none">Barcelona Festival</a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="inner">
+          <div class="footer_content">
+            <ul class="community">
+              <li>Community</li>
+              <li><a href="#none">Subscribe</a></li>
+              <li><a href="#none">Give a Gift</a></li>
+              <li><a href="#none">Customer Service FAQ</a></li>
+              <li><a href="#none">Access Your Serve Subscription</a></li>
+            </ul>
+            <ul class="network">
+              <li>Network</li>
+              <li><a href="#none">Privacy Policy</a></li>
+              <li><a href="#none">Terms of Service</a></li>
+              <li><a href="#none">Advertise</a></li>
+              <li><a href="#none">Jobs</a></li>
+            </ul>
+            <ul class="help">
+              <li>Help Preserve This Project</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+              <li>Copyright 2024 EZEN. All Right reserved.</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a class="gototop" href="#">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+  </body>
+</html>
