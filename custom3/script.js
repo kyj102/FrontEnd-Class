@@ -1,9 +1,11 @@
-/* backgorund image change */
+const items = document.querySelectorAll("#card_items li");
+console.log(items);
 
-const bgImgs = ["bg_01.jpg", "bg_02.jpg", "bg_03.jpg", "bg_04.jpg", "bg_05.jpg"];
+const bgImgs = ["bg01.jpg", "bg02.jpg", "bg03.jpg", "bg04.jpg", "bg05.jpg"];
 
 const bgImg = document.querySelector("#background_img");
-bgImg.style.backgroundImage = `radial-gradient(circle, transparent, rgba(0, 0, 0, 0.7)), url(./img/${bgImg[0]})`;
+console.log(bgImg);
+bgImg.style.backgroundImage = `radial-gradient(circle, transparent, rgba(0, 0, 0, 0.7)), url(./img/${bgImgs[0]})`;
 
 const topContents = document.querySelector("#top_contents");
 const contentTit = topContents.querySelector(".top_contents_title");
@@ -22,7 +24,7 @@ fetch("./Data.json")
         e.preventDefault();
         const { title, description } = jsonData.data[index];
         bgImg.style.backgroundImage = `radial-gradient(circle, transparent, rgba(0, 0, 0, 0.7)),
-        url(./img2/${bgImgs[index]})`;
+        url(./img/${bgImgs[index]})`;
         contentTit.innerText = title;
         contentDesc.innerText = description;
       });
