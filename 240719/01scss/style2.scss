@@ -1,0 +1,18 @@
+.frame {
+  div {
+    border: 3px solid #000;
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+  }
+}
+
+// 1부터 9까지의 숫자를 i라는 변수에 넣겠다, .frame:일반구조선택자
+// (#{인자값}) > #{}를 넣는다. 왜넣지
+@for $i from 1 through 9 {
+  .frame {
+    div:nth-child(#{$i}) {
+      width: 50px * $i;
+    }
+  }
+}

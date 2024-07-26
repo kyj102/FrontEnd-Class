@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$padding: 50px;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .container {
+    border: 5px solid gold;
+    height: 100vh;
+    padding: $padding;
+    .content {
+      background: #eee;
+      height: 100%;
+      text-align: center;
+      padding: $padding;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  body {
+    .container {
+      .content {
+        //height:auto - 컨텐츠가 기본적으로 가지고 있는 높이에 맞춘다는 뜻.
+      height: auto;
+      //padding값이 20px보다 작거나 같다고 한다면, $padding변수값을 적용한다.
+      @if($padding < 20px) {
+        padding: $padding;
+      }
+      //padding값이 20px보다 작거나 같지 않다면, $padding변수값의 2등분 값을 적용한다.
+      // else > ~가 아니라면 조건문.
+      @else {
+        padding: $padding / 2;
+      }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+$color: (
+  item-color: #74b9ff,
+  bg-lightcolor: #fff,
+  bg-darkcolor: #000,
+  bg-item-color: #111,
+  bg-item-border: #222
+);
+
+$item-size: 100px;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: map-get($map: $color, $key: bg-darkcolor);
+  .icons {
+    display: flex;
+    gap: 20px;
+    li {
+      label {
+        input[type="checkbox"] {
+          // input태그의 체크박스 지워주는 속성
+          display: none;
+          &:checked + div {
+            border: none;
+            box-shadow: 0 0 ($item-size / 10) map-get($map: $color, $key: item-color);
+          }
+          &:checked + div span {
+            text-shadow: 0 0 ($item-size / 10) map-get($map: $color, $key: item-color);
+          }
+        }
+        div {
+          color: map-get($map: $color, $key: bg-lightcolor);
+          width: $item-size;
+          height: $item-size;
+          background: map-get($map: $color, $key: bg-item-color);
+          // 선언해둔 아이템사이즈 변수에서 10을 나눈 값을 적용시키겠다는 뜻
+          border-radius: $item-size / 10;
+          border: ($item-size / 33) solid map-get($map: $color, $key: bg-item-border);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.3s;
+          span {
+            font-size: $item-size / 2;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

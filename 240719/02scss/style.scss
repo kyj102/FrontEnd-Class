@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$main-bg: #222;
+$main-light: #ff5a86;
+
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: $main-bg;
+
+  .btn-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button1 {
+      color: $main-light;
+      width: 150px;
+      height: 100px;
+      position: relative;
+      background: $main-light;
+      border-radius: 50px 0 0 50px;
+      rotate: 45deg;
+    }
+    .button2 {
+      color: $main-light;
+      width: 150px;
+      height: 100px;
+      position: relative;
+      background: $main-light;
+      border-radius: 50px 0 0 50px;
+    }
+  }
+}

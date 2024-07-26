@@ -1,0 +1,30 @@
+// 기존의 일반적인 변수선언
+// $font-focus: crimson;
+
+// 변수가 많거나 중복되는 속성이 많을때 : 이터러블 객체
+// color를 먼저 불러오고, 소괄호 안에 변수값들을 선언해준다.
+$color: (
+  font-primary: #2d3436,
+  font-secondary: #636e72,
+  font-focus: #d63031,
+  bg-primary: #dfe6e9,
+  bg-secondary: #b2bec3,
+);
+
+$headline-font : (
+  large: 45px,
+  medium: 32px,
+  small: 22px
+);
+
+body {
+  background: map-get($color, bg-primary);
+  .frame {
+    h1 {
+      color: map-get($color, font-focus);
+    }
+    p {
+      font-size: map-get($headline-font, medium);
+    }
+  }
+}

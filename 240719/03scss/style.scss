@@ -1,0 +1,57 @@
+$color: (
+  bg-color: #222,
+  item-color: #ff4778
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: map-get($map: $color, $key: bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .heartbeat {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: map-get($map: $color, $key: item-color);
+    transform: rotate(45deg);
+    box-shadow: 0 0 100px map-get($map: $color, $key: item-color);
+    animation: heart-beat 0.5s linear infinite;
+
+    //하트 반원 두개 만들기
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: map-get($map: $color, $key: item-color);
+    }
+    // 반원 두개 나타내기
+    &::before {
+      top: -50%;
+    }
+    &::after {
+      left: -50%;
+    }
+  }
+}
+
+@keyframes heart-beat {
+  // scale값을 제일 나중에 입력해서 네모로 돌아갔으니 다시 rotate값을 다 적용해준다.
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.9);
+  }
+}
