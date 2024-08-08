@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body #container {
+  text-align: center;
+}
+body #container #campInfo {
+  margin: 15px 0;
+}
+body #container #campInfo li {
+  font-size: 15px;
+  line-height: 1;
+  padding: 4px 0;
+}
+body #container #campInfo li label {
+  display: inline-block;
+  width: 60px;
+}
+body #container #campInfo li input[type=text] {
+  width: 200px;
+  height: 30px;
+  border: 0.5px solid #cecece;
+  border-radius: 8px;
+}
+body #container input[type=submit] {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body #container table {
+  margin-top: 20px;
+  border: 0.5px solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+body #container table th {
+  border: 0.5px solid;
+  padding: 10px 48px;
+}
