@@ -1,0 +1,137 @@
+240708
+
+*자바스크립트 기본 개념단위 : 변수
+변수 => 값을 담는 그릇
+어디에서 선언되고 생성되는지에 따라 전역변수(global) / 지역변수(local)
+
+random함수 : 0~1미만의 실수값(소수점)을 난수형태로 랜덤생성
+
+  const toekn = String(Math.floor(Math.random() * 1000000)).padStart(6, "0");
+
+Math.random 몇자리의 숫자를 랜덤으로 할것인지
+String 랜덤으로 나온숫자를 문자열로 변환
+padStart 빈 자릿수에 어떤숫자로 채울것인지 (6, "0") => 여섯자리문자열에 빈 자릿수는 0으로 채운다
+const toekn = 토큰 변수선언
+
+
+밀리초 시간개념 => 1초를 1000으로 인식
+1970년 1월 1일 ~ 현재시점
+
+/ 몫 을 찾아오는 것
+% 나머지값 을  찾아오는 것
+
+
+
+Figma
+> auto layout
+> layout grid
+> wireframe
+> component / instance
+> prototype
+
+
+html5
+> 태그
+> 공간분할태그(inline, block)
+> semantic
+
+
+css3
+> 선택자 13개
+> 속성 13개
+
+
+Layout 
+> desktop Lofi wireframe
+> desktop Hifi wireframe
+
+
+css3_v2
+> transition (*전환/변형)
+=> css에서 반응선택자를 사용할때 주로 사용
+=> 반응을 하기 전과 후로 나뉘어진다는 뜻이기에, 그 전후의 상태변화 => 시차를 두고 만들어주고 싶을때
+=> 반응이 발생되기 전 단계에서 속성값을 적용
+
+1. transition-duration : 변형이 작동할 수 있는 기간 설정
+2. transition-delay : 반응선택자를 통해서 이벤트 실행 후 얼마 후에 변형 스타일을 적용할 것인지 설정
+3. transition-propertiy : 변형스타일을 적용할 요소를 무엇으로 설정할 것인가 (높이,너비 등)
+4. transition-timing-function : 가속 혹은 감속에 대한 영향을 줄 수 있는 함수설정
+> linear : 가속, 감속X
+> ease : 도입부분(in)은 조금 덜 완만하게 / 완료부분(*out)에서는 조금 더 완만하게 / 중간영역에서 급격하게
+> ease-in : 도입부분(in)에서는 완만하게 시작 / 완료부분(*out)에서는 급격하게 종료
+> ease-out : 도입부분(in)에서는 급격하게 시작 / 완료부분(*out)에서는 완만하게 종료
+> ease-in-out : 도입부분(in)과 완료부분(*out)에서는 완만하게 / 중간영역에서 급격하게
+▶ https://cubic-bezier.com/
+
+/ 축약형 순서 /
+font : style size/line-height family
+background : gradient, image, position/size, repeat
+transition : propertiy  duration  timing-function  delay
+
+
+
+> animation
+1) animation-duration : 얼마의 기간동안 애니메이션 실행
+2) animation-delay : 이벤트 발생후 얼마후 시점부터 애니메이션 실행
+3)animation-timing-function : 애니메이션 실행 시, 가/감속 어떻게 할 것인가
+4) animation-direction : 애니메이션 실행방향 설정 (*기본 : 좌->우)
+5) animation-name : 해당 애니메이션만의 고유한 이름 설정
+6) animation-iteration-count : 애니메이션을 얼만큼 반복하게 할 것인가?
+7) animation-play-state : 애니메이션에 일시정지의 기능을 삽입할 수 있다. 
+
+
+
+> transform (*변환)
+
+* transition : 어떤 이미지 혹은 아이템요소가 변환하는데 있어서 변형에 대한 속성값을 제어(변환을 위한 속성값 제어)
+* transform : 어떤 이미지 혹은 아이템 요소의 형태 혹은 위치(*좌표) 등 자체를 변환시키기 위한 속성(물리적인 하드웨어의 변환) / 좌푯값 변경 / 각도회전(*웹 좌표게를 중심) / 중심축(*x, y, z)으로부터 회전 / 크기변경
+* transition-origin : 수직수평값 변경
+
+rotate(angle deg) : 회전각도
+
+scale(x, y, z) : 크기
+scaleX( ) : 크기
+scaleY( ) : 크기
+scaleZ( ) : 크기
+
+skew(x, y, z) : 특정 중심축을 기준으로 기울기
+skewX( ) : 특정 중심축을 기준으로 기울기
+skewY( ) : 특정 중심축을 기준으로 기울기
+
+translate(x, y, z) : 특정 크기만큼 이동
+translateX( ) : 특정 크기만큼 이동
+translateY( ) : 특정 크기만큼 이동
+translateZ( ) : 특정 크기만큼 이동
+
+=> 1개의 이미지 혹은 도형요소에 복수의 transform 효과 적용가능
+=> 적용하는 순서에 따라서 결과값이 완전히 달라질 수 있음
+
+> 3D 공간개념
+3차원 = 3D
+=> z축에 대한 공간감 생성
+
+★자식요소에서의 z축으로부터의 공간감을 적용시켜주기 위해서 부모요소에서 적용★
+  transform-style: preserve-3d;
+(*반드시 부모요소에 들어가있어야함)
+
+반대편의 면을 보이지 않게 해주는 기능
+backface-visibility: hidden;
+
+★원근감 적용★
+-webkit-perspective: 2000;
+perspective: 2000;
+
+loading spinner
+Server Side Rendering
+Client Side Rendering => React.js
+
+
+
+css3_v3
+> flexable / responsive (*반응형)
+> flex / gird
+> media-query => device / break-point
+
+
+scss
+> mix-in / include

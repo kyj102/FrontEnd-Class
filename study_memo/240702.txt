@@ -1,0 +1,19 @@
+240702  
+
+▶CSS3
+
+animation-fill-mode: both;
+> 어떤 애니메이션이 동작하면 리셋되고 최초의 상태부터 다시 시작하는 기능
+
+요소들의 맨 처음과 끝은 nth-child에 숫자넣을필요없이 first-child, last-child로 대체가능
+
+      p {
+        counter-increment: rint;
+      }
+      p::before {
+        content: counter(rint) ".";
+      }
+
+전후문자선택자 > 숫자 자동으로 증가시켜주는 함수
+
+overflow: hidden; > 부모요소 영역 외의 요소들은 보이지 않게 숨겨주는 기능

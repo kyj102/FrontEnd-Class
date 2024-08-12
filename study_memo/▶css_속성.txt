@@ -1,0 +1,153 @@
+★CSS속성★
+
+CSS : Cascading Style Sheet
+
+1.html문서 안에 특별한 font-size를 지정하지 않은 상황이라면, 기본적인 font-size : 16px / 폰트사이즈 기본 설정값 중 가장 큰 속성값 => h1태그 : 32px
+
+> em : element의 약자. 부모요소의 font-size를 기준으로 몇 배수의 크기를 가져가게 할 것인가?
+(부모요소의 속성만 바꾸면 자동으로 바뀌기 때문에 효율적임.)
+
+> ★rem(실무에서 가장 많이씀) : root element의 약자. 현재 작업중인 문서 내 최상위 요소의 태그, 혹은 그에 준하는 선택자.
+
+실무에서 작업할 때 ex) :
+우리 작업 제품 (*웹페이지)
+- Default 폰트 : 18px
+- * (전체선택자) or body태그 => font-size: 18px이라고 합의한것
+- 9px을 쓰고 싶다면 => 0.5rem
+- 메인섹션의 타이틀 : 1.5rem
+추후 폰트사이즈 수정작업을 하고 싶을때 > 디폴트폰트사이즈만 바꾸면 > 전체페이지 폰트사이즈가 바뀜.
+
+2. 가변그리드
+: 웹페이지 크기가 줄어들어도 margin, padding값의 고유속성을 유지하는것
+> grid layout
+
+3. vw / vh
+viewport width / height
+: 문서를 보는 사용자의 디바이스 매체의 너비와 높이
+
+height 100% => 현재 문서 상에서 작성된 컨텐츠의 높이만큼만 높이를 결정한다는 뜻
+
+▶ display: flex; 일때, height: 100vh
+우리 눈에 보여지고 있는 모니터 높이 기준으로 수직 정렬을 주겠다는 의미
+
+
+
+
+
+
+
+
+1) 단위 : px / rem / em / % / vw / vh
+
+2) display 속성 : none / block / inline / inline-block
+ display none / block
+어떤 요소를 흔적도 없이 지워버리는것 / 다시 나타나게 하는것
+inline : 한줄정렬 (w, h, m, p의 상하값을 받지 않기 때문에 속성을 넣어도 변화가 없음)
+
+3) visibility 속성 : visible / hidden / collapse 
+공간을 남겨놓고 지워야할때 : visibility: hidden;
+공간까지 지워버리고 싶을때 : display : none;
+
+4) opacity 속성
+1=>100% : 불투명 / 0=>0% : 투명
+
+5) margin / padding 속성
+- 1개 : 상하좌우 값 동일
+- 2개 : 상하 / 좌우
+- 3개 : 상 / 좌우 / 하
+4개 : 상부터 시계방향
+
+6) box-sizing
+★border-box : 처음에 설정해놨던 w,h값에 맞춰서 m,p값을 맞춰줌
+(border / padding값을 content item w&h값에 포함시킨다)
+content-box : 처음에 설정해놨던 w, h값을 초과해서 m, p값이 적용됨. 
+(content item에 적용한 w,h값을 그대로 유지한채로 border, padding적용)
+
+7) font 속성
+- font-family
+(구글폰트에서 @import url 복사 > stylesheet에 붙여넣기 > font-family 링크 > 폰트속성에 붙여넣기)
+- font-size 
+- font-weight
+- font-style
+=> 축약형 :  순서가 중요함. (style size/line-height family;)       
+font: italic 4rem/5 "Nanum Pen Script", cursive;
+font-weight: 700;
+line-height : 현재 작성된 텍스트의 높이를 제어목적 / 수직정렬 = 세로정렬 가능 (*단문한정, 문장에는 해당x)
+* 행간 X, 행간을 주고싶으면 margin top, bottom을 줘야됨
+
+8) background 속성
+- image : url( ) 함수를 사용해서 특정 이미지를 적용하고자 할 때
+이미지 여러장 사용가능, 이미지의 확장자가 png일 경우, 배경컬러를 투명하게 만들때 사용하는 확장자
+- color : 배경컬러 이미지를 지정하고자 할 때
+- size
+>% : 현재 삽입한 이미지를 출력하고 있는 매체의 너비를 기준으로 %의 비율을 적용하고자 할 때
+100% : 해당 부모요소의 100%의 너비를 사용하겠다는 뜻(이미지가 웹브라우저보다 클 때)
+> cover : 현재 삽입하고자 하는 이미지의 너비를 중심으로 삽입(%와 같은 개념)
+> contain : 현재 삽입하고자 하는 이미지의 높이를 중심으로 삽입
+- position
+> 적용한 backgroung img의 위치를 어디에 둘지 결정하고자 할 때
+- attachment(부착), position속성과 자주 같이 사용함
+> 스크롤이 이동되더라도 해당 이미지를 특정 위치에 고정시키고 싶을때 사용
+> fixed : 포지션으로 정의한 공간에 고정하겠다는 뜻
+- repeat
+> no repeat (배경반복X)
+> 삽입된 이미지는 기본적으로 repeat속성을 가지고 있지만, 이 속성을 사용하고 싶지 않은경우 no-repeat사용
+
+background 축약형
+이미지 주소 포지션/사이즈 어테치먼트 리피트  (슬래시 중요함, 여러개 이미지 넣을때는 각각의 이미지에 속성값 일일이 넣어줘야됨)
+background: url("./img/BackgroundFront.png") bottom/100% fixed no-repeat,
+
+
+
+★ 9) position 속성
+- static (*순차적인) : 기본적으로 html문서를 통해 tag를 사용하면 기본적으로 position의 속성값이 static이 됨.
+
+- relative (*상대적인) : 순차적으로 입.출력된 아이템 요소들 사이에서 상대적인 위치좌표값을 가지고 싶을 때
+bottom, right > 기존 웹 좌표계를 거스르기때문에 주의해야함 (양수일수록 브라우저의 안쪽으로 들어감)
+
+- absolute (*절대적인) : 기존에 작성된 태그들과 다른 차원으로 넘어가기 때문에 위치 좌표값을 절대적으로 사용.
+(*부모요소들 중 누군가가 relative속성을 가지고 있다면, 해당 부모를 기준으로 절대 위치 좌표값을 가진다.)
+★ 부모가 body인 header인 경우는 어차피 웹 브라우저 중심으로 움직이기 때문에 굳이 absolute를 줄 필요는 X.
+
+- fixed (*고정된) : 설정한 포지션 위치값에 고정으로 붙어있는 경우
+> 구현하고자 하는 웹 브라우저의 높이가 길면 길수록 이 fixed요소는 필수임
+> ex) tab bar, toggle menu, 날개배너 등, 눌러서 한번에 top으로 가게하는 버튼
+
+- sticky (*달라붙는) : 스티커
+=> 특정 좌표값에서 스티커처럼 붙어있도록 하고자 할 때
+> ex) 상단의 헤더 navigation
+
+- z-index : 3차원 공간에 대한 위치 정의
+x, y축 / x, y, z축
+> 값이 크면 클수록 모니터를 기준으로 앞으로 튀어나오는 위치 좌표값
+> 값이 작으면 작을수록 모니터를 기준으로 뒤로 들어가는 위치 좌표값
+
+
+10) bord 속성
+- border-width
+- border-style
+- border-color
+=> 축약형 : border: 5px solid crimson;
+=> border-radius : 테두리를 둥그렇게 생성
+값 1개 : 상하좌우 모두 값을 동일하게 적용
+★값 4개 : 좌상단 / 우상단 / 우하단 / 좌하단 순서대로 값이 각자 다르게 적용됨
+50% 이상 > 원
+
+11) float 속성 : 예전에 많이 사용하던 속성 
+float : 부유하다(어딘가에 떠다니다)
+특정 컨텐츠를 좌 or 우 로 모으려고 사용한 기능
+- 웹 뉴스 기사 컨텐츠 출력하고자 할 때
+> 좌측 : 기사이미지, 우측 > 기사내용
+매체에 발달에 따라 레이아웃 정렬 이슈가 많아짐 => float탄생기능의 목적과 상반됨
+> 그래서 레이아웃 정렬을 위한 전문 문법 => flex / gird가 나옴
+
+12) shadow 속성
+- text-shadow : 텍스트에 그림자를 부여하는 속성
+- box-shadow : 아이템박스에 그림자를 부여하는 속성
+(*속성값 : x축으로부터 떨어진 지점 / y축으로부터 떨어진 지점 / 그림자의 선명 혹은 흐림정도 / 색상 )
+
+13) gradient 속성
+- linear-gradient ( ) : 선형
+- radial-gradient ( ) : 원형
+
+web gradients.com

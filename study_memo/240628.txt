@@ -1,0 +1,125 @@
+240628
+css를 활용해서 background 이미지를 가져오는 속성 및 방식이 상이함
+* 속성을 축약해서 사용하는 문법 존재
+- 글자 사이즈 : font-size / font-weight
+
+background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.7)),
+    url("./img/image\ 3.png") center/cover no-repeat; ↓
+
+- background-image : background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.7)),
+    url("./img/image\ 3.png")
+- background-size : center
+- backround-position : cover
+- backgorund-repeat : no-repeat
+
+JS로 css스타일을 제어하려면 style속성을 반드시 붙임 style.backgroundimage
+
+카카오 맵서비스
+영화 데이터
+가상화폐 사이트 가격정보
+기상데이터
+
+API : json => Javscript Object Notation
+자바스크립트가 선호하는 형태의 자료
+
+어떤 결과값을 도출하는 데에 방법이 다양함
+position : absolute
+margin
+display
+grid
+block
+
+100vh = 브라우저에 보이는 높이값
+100% = 브라우저 전체 높이값
+
+●Git / GitHub
+- Git
+1. 형상기억관리 툴 / 버전관리 툴
+2. F/E or B/E 웹 개발에서는 필수적 요소
+3. 방대한 지식의 양을 가지고 있다.
+
+ - working Dir : 현재 작업중인 로컬 컴퓨터 안에 있는 루트 디렉토리.
+- staging Area : Git에 commit하기 전 단계로 commit을 할 데이터를 보관하는 장소.
+- git Dir : 실제 버전 관리를 하기 위해서 commit을 한 데이터들이 저장되어있는 장소.
+- git Hub : 나의 로컬 컴퓨터에 commit된 데이터를 내가 아닌 협업개발자들도 같이 공유해서 사용할 수 있도록 만들어진 git의 원격저장소.
+
+4. git을 사용하려면
+
+1) 컴퓨터 git 설치 :
+- 로컬 컴퓨터에 gitBash 라는 프로그램이 설치가 되어 있어야 함
+(명령프롬프트 실행)
+- git -v : 로컬컴퓨터에 설치된 gitBash 버전 확인
+- git config --list : 로컬컴퓨터에 저장된 git 소유자의 프로필 정보를 확인.
+- 구글 : git Bash 검색해서 다운로드
+
+2) git Hub 계정 생성
+
+3) git-hub 계정
+- 계정 anme & 계정 email이 내 정보로 있어야함.
+- name : kyj102
+- email : yain4746@naver.com
+
+4) 로컬컴퓨터에 나의 git 정보를 세팅
+- cmd > 관리자 권한 모드, 일반 모드 둘 다로 들어가서 실행
+- git config --global user.name "kyj102" < 이름을 정의
+- git config --global user.email "yain4746@naver.com" < 이메일을 정의
+- git config --list > 엔터치고 마지막에 username, useremail 이 뜨는지 확인
+
+5) 기존 email 혹은 name을 수정하고자 할 때
+- git config --unset --global user.name // 기존등록 name 삭제
+- git config --unset --global user.email // 기존등록 email 삭제
+
+6) 로컬컴퓨터에서 나 말고 다른 사람의 정보가 나타날 시
+- 관리자 모드(*전역) : git config --global --unset credential.helper
+- 일반 모드(*로컬) : git config --local --unset credential.helper
+- 시스템 : git config --system --unset credential.helper
+
+7) 로컬 git 저장소 & 원격 git-hub 저장소 연결
+- git-hub 저장소 : Repository(*레파지토리, 일종의 폴더. 무제한으로 생성 가능) => 폴더생성
+- 로컬컴퓨터 바탕화면에 신규폴더(*파일명:FrontEnd-Class) 생성 => daily commit (*오늘날짜 폴더 생성)
+- 제일 상위폴더 상태에서 code로 열기 > ctrl + ~ > 터미널창 열기 > powershell창 옆 더하기 창 클릭 > Git Bash선택
+- ▶https://github.com/kyj102/FrontEnd-Class.git
+
+◈private 레파지토리 : commit에 잔디가 안생김
+README file : 레파지토리를 소개하는 파일
+
+8) 로컬컴퓨터에 staging area 생성
+- 터미널창에 git init > 엔터 > 프론트엔드클래스 제일 상위클래스 루트폴더에 .git이라는 폴더가 생겼는지 확인(★.git폴더는 최초생성 단 한번만 써야함.★
+
+9) .git & repository연결
+- 터미널에 입력 > git remote add origin 레포지토리 url
+▶git remote add origin https://github.com/kyj102/FrontEnd-Class.git
+- 터미널에 입력 > git remote -v (*정상적으로 연결이 되있는지 확인하는 명령어)
+▶터미널에 (fetch), (push) 두 단어가 나와야됨.
+▶fetch : 데이터를 받을 준비가 됨.
+▶push : 데이터를 보낼 준비가 됨.
+
+10) 나의 Data를 Staging area로 input하고자 할 때
+- git add . (현재 나의 루트폴더에 있는 모든 데이터를 더하겠다는 뜻의 명령어)
+- git status (git의 상태를 보는 명령어, staging area에 commit할 준비가 되었다는 것을 확인)
+
+11) Commit을 하기 위한 메시지 기록
+- 내가 언제 어떤 목적으로 commit을 했는가를 인지하기 위한 목적
+- git commit -m "240628"    ◀ (강의내용을 commit할때는 그날의 날짜를 적는게 가장 좋음)
+
+▶좌측 탐색기 240628 폴더 옆 우측 점이 없어졌는지 확인
+
+12) 원격 레포지토리로 data를 commit
+- git push origin main
+
+★오류났을때
+제어판 > 사용자 계정 > 자격증명 관리자 > 일반자격증명 > 내가 아닌 자격증명 제거 > 일반 자격증명 추가
+▶ 인터넷 또는 네트워크 주소 : https://github.com/kyj102/FrontEnd-Class.git
+▶ 사용자 이름 : git Hub 닉네임 (kyj102)
+▶ 암호 : git Hub 패스워드
+> 확인 > VsCode 껐다가 루트폴더(FrontEndClass) 들어가서 다시 Code로 열기 > 터미널창에 git push origin master > 엔터 > 브라우저와 연동
+
+
+13) 수업끝나고 학원에서 백업할때 : (FrontEnd-Class).git폴더 > code로 열기 > 터미널창에서 10) git add . 부터 시작
+
+14) 집에서 백업할때 : 
+FrontEnd-Class-Home(집용폴더)생성 > (아무것도 없는 상태에서) Code로 열기 > 터미널창에서 Git Bash창으로 바꾸기 >
+- git init
+- git remote add origin https://github.com/kyj102/FrontEnd-Class.git
+- git pull origin master
+

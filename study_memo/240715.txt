@@ -1,0 +1,60 @@
+240715
+
+media query 유의사항
+1) 데스크탑 모드에서의 선택자가 미디어쿼리에서도 동일한 선택자를 띄고 있어야 한다.
+> 데스크탑 모드에서 태그선택자를 했다면 미디어에서는 아이디나 클래스값을 붙이면 X
+2) max-width 
+> 무조건 너비가 넓은 순서대로 (1920(데스크탑)>780>360px)
+min-width (기본 베이스를 모바일로 했을때)
+> 무조건 너비가 좁은 순서대로 (780>1920px)
+
+
+▶ JS 변수선언 var, let, const
+
+// 전역변수(global): 스크립트 문서안에서 그 어떠한 요소들이라도 이 변수를 사용할 수 있도록 만든것
+// 지역변수(local): 어떠한 함수나 조건문에서만 쓸수있는 변수
+
+// var > 전역변수 . 전역변수이기 때문에 다른 요소를 적용한 변수 이름이 겹쳤을때 프로그래밍상에서 오류가 생김(여러명이서 협업할때는 사용하면 안됨)
+
+// let(재선언 불가, 재할당 가능) & const(재선언, 재할당 모두 불가능)
+
+
+* slide 라이브러리 : slick slider > get it now > download
+있는 기능 그대로만 사용하고 싶을때 : slick.min.js
+새로운 기능을 덧붙여서 무언가를 만들고 싶을때 : slick.js
+
+* cdn.js > Contents Delivery Network
+클라우드 공간
+개발자들이 자주 사용하는 라이브러리 소스들을 업로드해놓은 공간
+
+jQuery > slick slider 이 순서대로 외부 라이브러리 링크연결
+
+index.html
+▶ <!--jQuery-->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+ ▶ <!--slick Slider-->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script defer src="./slick/slick.min.js"></script>
+
+▶  <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/b025ba9f1b.js"
+      crossorigin="anonymous"
+    ></script>
+
+▶ <!--custom css & JS-->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+
+
+피그마
+plugin > html to design

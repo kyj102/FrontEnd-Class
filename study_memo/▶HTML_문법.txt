@@ -1,0 +1,248 @@
+◈HTML5 문법
+
+HTML : Hyper(연결시키다) Text(의미를) Markup(열고닫음이라는 기본적 요소를 가진) Language(언어)
+
+* MDN
+
+* 속성&속성값
+
+* 주석
+
+* single tag(홑태그) VS multi tag (열고닫는형식인지, 아닌지로 나뉨)
+- a / img / br / hr 등이 싱글태그(홑태그)에 속함.
+- html 특성상 대부분 멀티태그 형식을 가짐.
+
+1. hn태그 : heading태그
+- h1~h6 : h1 > h6, 숫자가 적을수록 값이 커짐.
+- h1 : 32px
+- 기본 속성이 없는 태그(빈태그)
+* 단락에서 타이틀을 정의하고자 할 때 사용
+
+2. p태그 = paragraph tag
+* 문장을 입력하고자 할 때
+- dummy 문장을 활용해서 임시로 문자열 입력
+- lorem(의미가 없는 문장) > 피그마에도 플러그인 있음 (Lorem Ipsum)
+
+3. br태그 : break태그
+- 줄바꿈 태그
+
+4. hr태그 : horizontal Ruler 태그(수평으로 자, 즉 직선을 만들겠다)
+-웹페이지의 너비를 다 가져가는 특성이 있어서 자주 사용하지는 않음.
+
+5. a = anchor태그
+- href = 속성
+- 앵커태그는 반드시 href와 같은 속성이 필요
+- href속성, =""속성값
+-target속성, _blank속성값 (현재 보고있는 탭은 그대로 둔 상태에서 새 탭을 열어주는 것)
+- img속성, src속성값 (img태그는 반드시 src속성값을 사용해야함)
+- 특성 요소를 어딘가로 이동시켜주는 태그
+- 고유한 스타일이 존재 => 초기에 reset을 활용해서 제거하고 시작
+        text-decoration: none;
+        color: inherit;
+
+- 문서상에서의 내부이동
+
+- 1개의 요소 안에서 복수의 링크를 설정해야할 때!	
+. > 현재의 루트폴더를 중심으로 경로를 찾아나가겠다
+
+★ http://www.image-map.net/ (이미지 좌표 찾아주는 사이트)
+
+
+6.audio / video tag
+
+  ①  <audio src="./contents/music.mp4" controls="controls"></audio> 
+
+  ② <audio controls>
+      <source src="./contents/music.mp4" type="audio/mp4" />
+    </audio>
+- source src = "" 가 주로 쓰인다.
+- 실무에서는 전자보다 후자를 사용하지만 별로 쓰지 않는다.
+- controls속성 넣어야 창이 뜸.
+- controls의 속성값이 controls이기 때문에 생략이 가능하다
+- autoplay는 가급적 지양하는것이 좋다
+- 직접적으로 서버에 올리는 것보다 유튜브링크를 걸어서 끌고오는 것이 부담이 되지 않음
+
+1) block 태그
+- 하나의 행을 모두 차지하도록 설정되어진 태그
+- div
+
+2) inline 태그 (인위적으로 값을 줘도 안먹음)
+- 본인의 너비 및 높이값 만큼만 차지하도록 설정되어진 태그
+- span, i
+
+3) inline block
+- 태생적으로 inline이던 것을 / 후천적으로 block의 요소를 넣어줄 수 있음
+
+★부모요소에 display flex를 주면 자식요소가 전부 block으로 바뀜.
+
+id = 고유값(한번밖에 못 쓰는 값), logo등
+class = 수식에서 수량제한없이 사용가능, span / gnb등
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+df = display: flex;
+
+jcc = justify-content: center;
+
+aic = align-items: center;
+
+7. 목록태그
+- ul /ol
+> unorder list : 카운팅을 하지 않기 위한 목록(사용빈도 90%)
+> order list : 순차적으로 카운팅을 하기 위한 목록
+> li태그 함께해야지만 목록 기능이 적용됨
+
+*중첩목록
+
+★ 8. 테이블태그
+- table(부모요소) / tr(*행) / td(table data = 열)
+- 열 가운데서 대표격인 열 <th> : Table Header
+- html5 핵심문법 > semantic 태그 (*의미없이 사용하는 div태그 지양)
+- 만약 table짜고자 한다면 어디서부터 어디까지가 thead / tbody(스타일속성을 줄때 디폴트로 들어가는 속성) / tfoot인지 선언하도록 권장
+- colspan => 열을 병합하는 기능 (*본인을 포함해서 병합)
+- rowspan => 행을 병합하는 기능 (*본인을 포함해서 병합)
+ㄴ이때 rowspan이 적용된 줄의 행을 모두 지워야 병합이 된다.
+- 프로그래밍 언어 영역 => 짝수(even) 홀수(odd)
+- row(행)을 그룹하는 것은 어렵지 않음 => tr / thead ll tfoot
+- column(열)을 그룹하는 것은 1가지 방법만 존재함
+=> colgroup > col : 몇 개의 열을 선택할 것인지 => span(이때는 태그로X, 속성O)
+=> thead & tfoot이 colgroup보다 스타일에 대한 우선적용권을 갖는다.
+
+9. Mark 태그
+텍스트 뒷배경 컬러 (*형광) 강조
+
+10. B태그(Bold)
+텍스트 두껍게 해주는 태그
+
+11.figure & figcaption : 악어 & 악어새 공생관계
+- 보통 일반적으로 테이블 태그 등을 사용할 때, 해당 요소의 타이틀을 정의하고자 할 때
+
+
+
+--테이블태그 실습 : 한국의 차 --
+1) 행열 잡기
+  table>(tr*3>td*6)*10
+2) colspan으로 헤드 병합하기
+  <th colspan="6">한국의 차</th>
+3) style정의
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+    </style>
+4) rowspan으로 묶고 해당열 삭제후 td 넣어주기
+5) thead, tbody정의
+6) 테이블태그 밑에
+<colgruop>태그 사이에 <col style="background: #ccc /><col />*3
+
+GUI 방식 :
+- Graphic User Interface (*사용자로 하여금 눈에 보여지는 아이콘 혹은 이미지들을 제어할 수 있도록 만들어진 인터페이스 형식)
+
+CLI방식 :
+- Command Line Interface (*특정 기능을 구현하기 위해서 명령 프롬프트를 사용할 수 있는 터미널에 접속해서 명령어로 요소들을 제어하는 인터페이스 방식)
+
+찾기>  cmd(명령프롬프트) > cd desktop > 엔터 > cd kdtfed > 엔터 > mkdir 240627 > 엔터 > 루트폴더에 날짜폴더 생성됐는지 확인 > cd 240627 > 엔터 > code . > 엔터 > vscode로 열림.
+
+★12. form태그
+- action속성 & method속성을 갖고 있음.
+
+- action : client(*웹 브라우저)로부터 특정 값을 받아서 server로 해당 값을 전송해야할 시, 전송할 위치 경로를 정의하는 속성.
+
+- method : 사용자에게 값을 받아서 처리하는 방식을 어떻게 할 것인지를 구분하기 위한 속성.
+1) get : 사용자가 입력한 값을 서버에게 전달한 경우, 해당 값에 매칭되어지는 페이지를 서버가 반환하도록 하는 방식 method방식 ex)쇼핑몰회원들의 아이디 및 비밀번호가 맞는지 확인해주는 방식
+2) post : 단순히 특정 페이지를 그냥 가져와라! 이게 아니라, 사용자가 입력한 값을 반영한 업데이트되어진 페이지를 가져오고 싶을 때 사용하는 method방식 => ex.) 유튜브 페이지 / 댓글을 달았을때 그 값을 반영해서 새 페이지를 돌려보내는것, ID / PW입력했을때 도메인주소에 userID, PW가 노출되지 않도록 하는 것
+
+- 입력양식태그를 같이 사용해야만 form태그가 제 기능을 할 수 있다.
+
+label : for 속성값 = input id 속성값 일치하는 경우, label 태그로 input태그를 선택할 수 있도록 할 수 있음
+
+input type= "text" : 아이디 및 텍스트 값을 받고자 할 때 사용
+input type= "password" : 패스워드 같은 비밀스러운 값을 받고자 할 때 
+input type= "radiot" : 여러개 후보들 중에 1개를 선택하고자 할 때 (단일선택만 가능, name이름이 다 똑같음)
+input type= "checkboxt" : 여러개 후보들을 동시에 선택하고자 할 때 (복수선택 가능, name이름이 다 달라야함.)
+input type= "file" : 서버에 어떤 데이터를 업로드 하고자 할 때
+
+Select Tag
+- 여러개의 옵션들 중에서 하나를 선택할 수 있도록 해주는 form 입력양식 태그 
+- select태그의 경우, 내부적으로 option태그와 함께 사용해야만 정상적인 기능을 구현할 수 있음
+(*tip, option태그 중에서 메뉴명으로는 출력이 되나, 실제 사용자가 선택하지 못하도록 설정이 가능 => selected disabled
+ ★selected disabled : 선택할 순 없지만 제일 메인으로 보여줘야 될 경우 사용★
+<option value="none" selected disabled>메뉴선택</option>
+
+optgroupTag
+-option 요소들을 그룹화 할 수 있음
+
+-form태그 내부요소들을 하나로 그룹핑하고, 해당 요소들의 대표타이틀을 생성할 수 있다.
+
+    <form action="https://localhost:3000" method="get">
+      <select name="food" id="food">
+        <option value="none" selected disabled>메뉴선택</option>
+        <optgroup label="분식류">
+          <option value="food1">김밥</option>
+          <option value="food2">라면</option>
+          <option value="food3">떡볶이</option>
+        </optgroup>
+        <optgroup label="식사류">
+          <option value="food4">제육덮밥</option>
+          <option value="food5">돈까스</option>
+          <option value="food6">콩국수</option>
+        </optgroup>
+      </select>
+
+1) fieldset : 해당 form요소가 어떤 성격인지를 구분시키기 위한 목적으로 사용됨
+2) legend : fieldset의 타이틀을 생성해주는 역할
+
+*HTML5 어려워하는 이유
+★공간분할태그★
+1) block요소 태그 :
+- 한 줄(*한 행)을 모두 가져가는 속성
+- div / header / h(n) / p
+- width & height & margin & padding 모두 적용가능
+
+2) inline요소 태그 :
+-본인의 너비 및 높이값만큼만 공간을 차지하는 속성
+- span / label / input
+- w & h => 적용불가
+- m & p => 좌,우측 적용가능 / 상,하측 적용불가능
+
+3) inline-block요소 속성
+
+▶ 4) 만약, 부모요소 display 속성이 flex => 자식요소는 전부 block으로 바뀜.
+
+block VS inline-block
+block은 공존할 수 없지만 i-b은 공존하면서 동시에 block의 값을 가져갈 수 있음.
+
+*Semantic Tag :
+Semantic : 의미를 갖고 있는, 의미론적인
+
+header : 문서상의 헤더의 역할 => 머릿글 or 인트로의 역할
+nav : GNB or LNB와 같은 네비게이션 목록 역할
+aside : 사이드 측면 영역의 배너 or 지면 역할
+section : 실제 문서상의 본문 역할
+article : section태그 안에 소단락(*세부영역) 나누는 역할
+footer : 문서상의 푸터의 역할 => 꼬리말 or 에필로그의 역할
+
+
+
+
+
+

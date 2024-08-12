@@ -1,0 +1,112 @@
+▶FLEX 문법
+
+flex/ grid
+> 레이아웃 정렬 전용 속성
+> 기존 CSS로는 float / margin / padding / table => 레이아웃 정렬 => 불편함
+
+
+FLEX
+
+* 대전제 3가지 *
+
+1) 부모 (자식요소를 담을 수 있는 컨테이너 박스가 필요)
+> display : flex
+> justify content => 중심축을 기준으로 정렬 : (가로기준)수평정렬
+★ jcc를 무조건 가로기준이라고 생각하는것은 금물이다(중심축을 기준이라고 생각해야 함)
+
+* 단일 아이템인 경우
+- center : 아이템을 전체 너비의 정가운데
+- flex-start : 플렉스가 시작되어지는 지점을 기준으로 정렬
+(*웹의 모든 그래픽 요소는 반드시 좌=>우) => 왼쪽정렬
+- flex-end : 우측정렬
+
+* 복수 아이템인 경우
+- space-between (부모의 너비값에 동일한 간격으로 각 도형을 정렬시킨다)
+- space-around (각 도형에 무조건 동일한 간격을 할애한다)
+- space-evenly (도형간의 간격이 같기만 하면 됨)
+
+> align-items => 교차축을 기준으로 정렬 : (세로기준)수직정렬
+(★height값을 필수로 지정해줘야 함)
+- center
+- flex-star
+- flex-en
+- stretch : 자식요소의 높이값을 별도로 지정하지 않는 경우, 부모요소의 높이를 자동으로 상속받는 기능.
+
+
+
+> flex-direction => 중심축/교차축 무엇으로 할 것인가?
+(*Defalut => row / column)
+
+> row(가로중심축, 시작점 왼쪽) // row-reverse(중심축을 가로로 두되, 시작점 오른쪽부터)
+=> flex-end와는 다르게 각 요소의 정렬순서까지 전부 반대로 바뀜.  [ 1-2-3  =>  3-2-1 ]
+(*flex-end: 원래 입력한 요소의 속성을 지키면서 위치만 바뀌는것.)
+
+> column(상단부터 시작) // column-reverse(하단부터 시작)
+=> flex-end와 비슷하게 보이나 엄연히 다른 기능
+
+
+
+
+> flex-wrap => default : "no wrap"(자식요소의 너비값을 보장하지 않는다.)
+wrap : 자식요소의 너비값을 보장받지 못하는 상황에서 너비값을 유지하고 싶을 때 자동으로 행바꿈해주는 기능
+* flex-wrap & flex-direction 하나로 통합해서 작성
+> ex) flex-flow : row wrap;
+
+
+> align-contents => 자식요소들이 여러개의 행으로 구분이 되어졌을때, 어느 방향으로 모든 자식요소들의 수직정렬을 결정할 것인가?
+행으로 구분된 자식요소들을 하나의 컨텐츠로 식별해서 수직정렬을 주고자 할 때 사용.
+(★align-items > 각 자식요소들을 개별로 인식함)
+- center
+- flex-start
+- flex-end
+(*content가 붙으면 이 요소들 사용가능)
+- space-between
+- space-around
+- space-evenly
+
+
+
+2)자식 (플렉스 레이아웃 시스템 문법을 적용받을 수 있는 아이템이 필요)
+> flex-grow : 부모요소의 너비에 비례해서 자식요소들의 너비의 비율을 결정
+
+> flex-shrink : 자식요소들의 너비가 줄어들 때의 비율을 결정(부모요소와 줄어드는 비중을 다르게 가져가고 싶을때)
+* 너비가 줄어들기 시작할때부터 적용, 숫자가 클수록 더 많은 비율로 줄어듦
+
+> flex-basis :자식요소들에게 고정 너비값을 부여하고 싶을때
+이 세개를 합친 축약형 > flex : flex-grow, flex-shrink, flex-basis
+(축약형 사용할때는 grow값만 필수 / shrink / basis는 옵션값)
+
+> order : 자식요소들의 포지션 위치순서를 결정
+
+
+
+3) 중심축 / 교차축
+- 중심축 default : 가로 row
+- 교차축 default : 세로 column
+
+
+
+
+
+
+
+
+
+
+
+
+
+* 특정 아이템 위치를 조정
+> transform > translate(*x, y좌표)
+
+* margin / padding
+> 특정 도형 및 요소의 위치를 조정
+> target하고 있는 도형 및 요소 주변 환경을 활용해서 위치정렬
+> 상대적인 지형요소에서 빛을 발한다.
+> 절대위치좌표(absoulte)를 준 상황에서는 m/p 속성이 적용되지 않음.
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+240624
+1. 오전 UI/UX 관련내용 수업 => 피그마 툴 / 단일페이지 직업 기획,제작 / 세부적인 기획요소(ux)
+2. 오후 html, css, java등 기초문법
+3. 마지막 1시간 => 첫번째 프로젝트 준비시간
+
+Lo-fi wireframe *저품질의 와이어프레임
+=> Low(품질이 낮은) Fidelity(*품질/퀄리티)
+
+Hi-fi wireframe *고품질의 와이어프레임
+=> Hight Fidelity
+
+전체너비 : 375px
+컨텐츠너비 : 327px
+좌우측 패딩 : 48px(전체너비-컨텐츠너비) / 2(양쪽) = 24px
+
+Component > 피그마 UI 작업 > 개별적인 사이즈 변경을 최소화 +통일감있는 일관된 UI디자인
+
+Instance > 부모요소인 Componant 디자인 가이드를 무조건 상속받는다
+> 독립적인 사이즈 변경 불가(weight, height값 등) 폰트컬러, 폰트사이즈는 변경가능
+
+예외사항 : 레이어에서 인스턴트 레이어 우클릭 > ★Detach instant > Component 와의 연결고리 해제
+> 부모요소와 상관없이 자유롭게 편집가능(ctrl Alt B)
+
+★PROTOTYPE > interaction > On click(동작툴들)
+
+<figma 핵심기능>
+1. Auto Layout
+2. Layout Grid
+3. Component / Instance
+4. Prototype
+5. Style Guide (Font, Color)
+6. Plug-in (Iconify, Feather icons, Unsplash)
+
+html to Design(확장프로그램)
+우측상단 Dev mode 클릭 > vs code 나갔다 들어오기
+
+content title
+
+*html, css, js => class명, id명 작명센스
+
+1) cammel 표기법 :
+contentTtitle (중간에 낙타의 혹이 튀어오른것처럼 알파벳 대소문자로 구분)
+
+2) sneak 표기법 :
+content_title (뱀의 모양처럼 중간에 패턴을 넣는것)
+
+3) 헝가리언 표기법 :
+ContentTitle(단어가 나뉘는 곳을 알파벳 대문자로 구분)
+
+모던 자바스크립트(도마뱀프사) > 자바스크립트의 교과서(수업내용은 이 책을 기반으로 함)
+
+컴포넌트로 변수(variable)활용해서 슬라이드 넘기는 법 적용하기(개인프로젝트 할때)
+
+
+
+＠ HTML5 문법 @
+
+HTML : Hyper(연결시키다) Text(의미를) Markup(열고닫음이라는 기본적 요소를 가진) Language(언어)
+
+* MDN
+
+* 속성&속성값
+
+* 주석
+
+* single tag(홑태그) VS multi tag (열고닫는형식인지, 아닌지로 나뉨)
+- a / img / br / hr 등이 싱글태그(홑태그)에 속함.
+- html 특성상 대부분 멀티태그 형식을 가짐.
+
+1. hn태그 : heading태그
+- h1~h6 : h1 > h6, 숫자가 적을수록 값이 커짐.
+- h1 : 32px
+- 기본 속성이 없는 태그(빈태그)
+* 단락에서 타이틀을 정의하고자 할 때 사용
+
+2. p태그 = paragraph tag
+* 문장을 입력하고자 할 때
+- dummy 문장을 활용해서 임시로 문자열 입력
+- lorem(의미가 없는 문장) > 피그마에도 플러그인 있음 (Lorem Ipsum)
+
+3. br태그 : break태그
+- 줄바꿈 태그
+
+4. hr태그 : horizontal Ruler 태그(수평으로 자, 즉 직선을 만들겠다)
+-웹페이지의 너비를 다 가져가는 특성이 있어서 자주 사용하지는 않음.
+
+5. a = anchor태그
+- href = 속성
+- 앵커태그는 반드시 href와 같은 속성이 필요
+- href속성, =""속성값
+-target속성, _blank속성값 (현재 보고있는 탭은 그대로 둔 상태에서 새 탭을 열어주는 것)
+- img속성, src속성값 (img태그는 반드시 src속성값을 사용해야함)
+
+- 특성 요소를 어딘가로 이동시켜주는 태그
+- 고유한 스타일이 존재 => 초기에 reset을 활용해서 제거하고 시작
+        text-decoration: none;
+        color: inherit;
+
+- 문서상에서의 내부이동
+
+- 1개의 요소 안에서 복수의 링크를 설정해야할 때!	
+. > 현재의 루트폴더를 중심으로 경로를 찾아나가겠다
+
+★ http://www.image-map.net/ (이미지 좌표 찾아주는 사이트)
+
+  ①  <audio src="./contents/music.mp4" controls="controls"></audio> 
+
+  ② <audio controls>
+      <source src="./contents/music.mp4" type="audio/mp4" />
+    </audio>
+- source src = "" 가 주로 쓰인다.
+- 실무에서는 전자보다 후자를 사용하지만 별로 쓰지 않는다.
+- controls속성 넣어야 창이 뜸.
+- controls의 속성값이 controls이기 때문에 생략이 가능하다
+- autoplay는 가급적 지양하는것이 좋다
+- 직접적으로 서버에 올리는 것보다 유튜브링크를 걸어서 끌고오는 것이 부담이 되지 않음

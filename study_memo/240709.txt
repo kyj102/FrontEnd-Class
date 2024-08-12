@@ -1,0 +1,20 @@
+240709
+
+▶ 비디오 종횡비 고정 속성공식
+something {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+}
+
+▶ 입체감 애니메이션 줄때 필수공식
+    -webkit-perspective: 1300;
+    perspective: 1300;
+
+transform-style : perserved 3d

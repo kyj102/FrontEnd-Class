@@ -1,0 +1,51 @@
+240703
+1. 슬라이드
+- 배열 자료구조
+- 싱글타입 (*이미지 단일)
+- 난이도 : 하
+- 화살표 클릭, 슬라이드 이미지 교체
+
+- 무한 슬라이드 (*화살표 클릭, 마지막 슬라이드 => 첫번째 슬라이드로 변환)
+
+- 자동슬라이드 (*굳이 화살표 클릭X, 알아서 슬라이드 교체)
+
+- 페이저 탑재 슬라이드 (*페이저를 클릭, 슬라이드 이미지 교체 + 슬라이드가 자동으로 페이지 교체될때 페이저도 자동으로 교체 + 페이저 역시 무한으로 실행)
+
+- 멀티플타입
+
+슬라이드 라이브러리
+https://animejs.com/
+https://swiperjs.com/
+https://kenwheeler.github.io/slick/
+https://uiinitiative.com/
+https://gsap.com/
+https://alvarotrigo.com/fullPage/ko/#page1
+https://noelboss.github.io/featherlight/
+
+document.queyselectorAll( ul li)
+console.log => NodeList
+> [li, li, li, li, li] => 배열자료의 형식 => 유사배열
+> 배열자료 안에 있는 모든 데이터는 각자 고유한 숫자 간직
+> index번호는 0부터 시작
+0, 1, 2, 3, 4
+
+mouseover & mouseout : 함께 세트
+> 이벤트 버블링 기능 O
+> 부모요소에 영향 O
+
+mouseenter & mouseleave : 함께 세트
+> 이벤트 버블링 기능 X
+> 부모요소에 영향 X
+
+1.나의 로컬컴퓨터 브랜츠 = 원격 default 브랜치
+- 로컬 git / 원격저장소 어떤 브랜치 업데이트
+- git remote update
+- git checkput main
+- git add .
+- git commit -m "240703"
+- git push origin main
+
+
+
+
+

@@ -1,0 +1,123 @@
+240625
+
+●figma
+
+vector아이콘 오토레이아웃 바로 주지말고 ctrl alt G 눌러서 프레임을 생성한 뒤 그 프레임에 오토레이아웃을 줘야됨
+
+이미지에 대한 높이와 너비가 픽스되어 있는 상황이라면 프레임을 만들어서 이미지를 가져오기
+정확하지 않다면 ctrl shift K로 가져오기
+
+특정 웹 페이지 내 최상단 네비게이션 메뉴 > GNB : Global Navigation Bar / Banner
+LNB : Local Navigation Bar / Banner (하위카테고리 네비게이션)
+
+smart animate : 레이아웃 구조 및 이름을 절대 변경해서는 안됨 (*처음 원본데이터를 생성 => 마우스 이벤트 부여 => 편집데이터를 출력)
+
+ctrl i => 이탤릭체
+ctrl B => 볼드체
+
+
+● HTML
+1) block 태그
+- 하나의 행을 모두 차지하도록 설정되어진 태그
+- div
+
+2) inline 태그 (인위적으로 값을 줘도 안먹음)
+- 본인의 너비 및 높이값 만큼만 차지하도록 설정되어진 태그
+- span, i
+
+3) inline block
+- 태생적으로 inline이던 것을 / 후천적으로 block의 요소를 넣어줄 수 있음
+
+★부모요소에 display flex를 주면 자식요소가 전부 block으로 바뀜.
+
+id = 고유값(한번밖에 못 쓰는 값), logo등
+class = 수식에서 수량제한없이 사용가능, span / gnb등
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+df = display: flex;
+
+jcc = justify-content: center;
+
+aic = align-items: center;
+
+7. 목록태그
+- ul /ol
+> unorder list : 카운팅을 하지 않기 위한 목록(사용빈도 90%)
+> order list : 순차적으로 카운팅을 하기 위한 목록
+> li태그 함께해야지만 목록 기능이 적용됨
+
+*중첩목록
+
+★ 8. 테이블태그
+- table(부모요소) / tr(*행) / td(table data = 열)
+- 열 가운데서 대표격인 열 <th> : Table Header
+- html5 핵심문법 > semantic 태그 (*의미없이 사용하는 div태그 지양)
+- 만약 table짜고자 한다면 어디서부터 어디까지가 thead / tbody(스타일속성을 줄때 디폴트로 들어가는 속성) / tfoot인지 선언하도록 권장
+- colspan => 열을 병합하는 기능 (*본인을 포함해서 병합)
+- rowspan => 행을 병합하는 기능 (*본인을 포함해서 병합)
+ㄴ이때 rowspan이 적용된 줄의 행을 모두 지워야 병합이 된다.
+- 프로그래밍 언어 영역 => 짝수(even) 홀수(odd)
+- row(행)을 그룹하는 것은 어렵지 않음 => tr / thead ll tfoot
+- column(열)을 그룹하는 것은 1가지 방법만 존재함
+=> colgroup > col : 몇 개의 열을 선택할 것인지 => span(이때는 태그로X, 속성O)
+=> thead & tfoot이 colgroup보다 스타일에 대한 우선적용권을 갖는다.
+
+9. Mark 태그
+텍스트 뒷배경 컬러 (*형광) 강조
+
+10. B태그(Bold)
+텍스트 두껍게 해주는 태그
+
+11.figure & figcaption : 악어 & 악어새 공생관계
+- 보통 일반적으로 테이블 태그 등을 사용할 때, 해당 요소의 타이틀을 정의하고자 할 때
+
+
+
+--테이블태그 실습 : 한국의 차 --
+1) 행열 잡기
+  table>(tr*3>td*6)*10
+2) colspan으로 헤드 병합하기
+  <th colspan="6">한국의 차</th>
+3) style정의
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+    </style>
+4) rowspan으로 묶고 해당열 삭제후 td 넣어주기
+5) thead, tbody정의
+6) 테이블태그 밑에
+<colgruop>태그 사이에 <col style="background: #ccc /><col />*3
+
+
+
+
+
+
+
+
+
+
+
+
+

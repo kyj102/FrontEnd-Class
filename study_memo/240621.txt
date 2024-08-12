@@ -1,0 +1,54 @@
+240621
+* 배포(deploy) : 작업한 결과물을 다른 외부 사람들도 확인,공유할 수 있도록 하는 마지막 출력작업
+
+*호스팅(hosting) : server에 데이터를 업로드하는 작업
+
+하단으로 갈수록 고퀄
+- filezilla(ftp) & dot.home(데이터를 올려놓을 수 있는 가상의 임시 server)
+-git-hub
+
+★추천하는 배포 사이트
+- netlify
+- cafe24(약간 아마추어틱) & Google Firebase
+- Amazon AWS
+
+*배포하기 전에는 항상 디버깅을 꼼꼼하게 체크
+bug (*벌레) / debuging(*벌레퇴치)
+
+* open graph ; SNS플랫폼 발달 & 스마트폰 대중화
+=> 공유하기 기능
+=> 어떤 내용 컨텐츠, 디자인 미리보기 형식을 공유(정보 사전인식 가능)
+
+★open graph시작
+
+관리자페이지 > 디자인 > 파일업로더 > add > 새폴더 > Chef > root폴더에서 img폴더 모두선택 > 업로드창에 드래그 앤 드롭 > start uploader > 업로더창에 없어지고 하단창에 이미지 목록이 생성됨 > 원하는 이미지 목록에서 주소복사 > 상단에 새 탭 만들기 > 새탭에 ctrl v  > 원하는 이미지인지 확인(이 방법이 절대경로) > vs code로 들어가기
+
+<meta Property="og:image" content="" /> 큰따옴표 사이에 복사한 이미지 url붙여넣기 
+
+    <meta property="op:image:width" content="390" />
+    <meta property="op:image:height" content="200" />
+
+★open graph완료
+
+구글 파이어베이스
+CLI : Command Line Interface
+NPM : Node Package Manager
+V8
+
+404 : 배포상에 문제가 생겼을때
+500 : 서버가 트래픽이 터졌을때
+
+배포하려고 하는 데이터는 모두 public이라는 오피셜 폴더에 넣어져 있어야 함
+
+배포했는데 에러나거나 실패시 > public폴더 안의 모든 데이터 지우기
+
+public folder > 수정할 필요 없는 완전한 데이터만 넣기
+
+firebase에서 이미지데이터가 안뜰때 : cafe24를 통해서 이미지 넣기
+
+크롬 url주소 옆 두줄동그라미 클릭 > 쿠키 및 사이트 데이터 > 개인정보보호 관리 > 인터넷 사용기록 삭제 > 지난24시간
+
+
+- 피그마 와이어프레임 -
+컬러 / 사이즈 
+fill - 점네개 클릭 - 라이브러리에 color/ <슬래시 반드시 넣어야함 >추가

@@ -1,0 +1,156 @@
+240705
+문자열이 길어질때 말줄임표로 표시해주는 기능
+style css ;
+           overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+<b> : 폰트, 텍스트 두껍게
+- 문서를 대표하는 타이틀이라는것을 암시하기 위한 기능
+
+<strong> 두껍게
+- 문서 및 단락 강조점
+
+id, class 속성값 스타일이 충돌될때 > id가 우선순위
+<div id="error_email" class="error"></div>
+
+flex를 사용하지 않는다면, 웹페이지를 제작할때 모든 요소들에 가변그리드를 항상 적용해야 했다
+flex : 반응형 웹앱페이지를 보다 쉽고 효율적으로 제작,관리하기 위한 레이아웃 시스템
+
+중심축과 교차축
+- flex-direction : column > 가로로 정렬시키지만 세로를 중심축으로 하고 싶을때(수직정렬)
+- jcc : 중심축의 센터정렬(수평정렬)
+
+form태그 : 사용자로부터 어떤 값을 받고자 하기 위한 목적
+> 사용자가 우리가 원하는 값을 넣지 않는 경우 / 체크 => false /true
+
+=> 유효성검사
+
+CSS3 & HTML5 연동방법
+1) 인라인 스타일시트
+2) 내부 스타일시트
+3) 외부 스타일시트 (link태그를 활용해 경로값을 붙여서 가져오는것)
+
+JS 3가지 방법
+1) 인라인 스크립트
+2) 내부 스크립트
+3) 외부스크립트
+HTML>   -on 태그 : 이벤트핸들러
+
+onkeyup="onchange()"
+onchange="changePhone1()"
+on key up : 사용자가 키보드를 눌렀다 떼는 순간, onchange 함수를 실행
+on change : 어떤 값이 변했을때, changePhone1 함수가 실행
+
+
+
+
+git : 버전관리시스템, 형상기억 관리
+1. 여러 사람들이 하나의 개발 프로젝트를 진행할때 A / B 서로 효율적으로 공유 및 협업목적
+2. 시간 & 차원에 구분없이 작업한 데이터를 관리
+3) IT업계에서 git 필수
+
+
+2)git-bash : git을 사용할수 있도록 해주는 터미널
+(*터미널: 운영시스템 영역)
+
+
+3.git 설치확인 : cmd (*명령프롬프트)
+git -v : 현재 설치되어있는 버전
+
+
+4.git 소유주 정보 확인
+git config --list
+
+
+5. git 소유주 정보 삭제 및 재입력
+*전역요소 삭제 : 관리자 권한 실행
+git config --global --unset credential.helper
+git config --global --unset user.name
+git config --global --unset user.email
+
+*지역요소 삭제 : 굳이 관리자 권한 실행X
+git config --local --unset credential.helper
+git config --local --unset user.name
+git config --local --unset user.email
+
+
+*재입력
+git config --global --unset user.name "your_name"
+git config --global --unset user.email "your_email"
+git config --list (소유주 변경되었는지 확인)
+
+*위와 같이 했음에도 불구하고 제대로 소유주 변경 안됐을때
+- 제어판 > 사용자계정 > windows자격증명 관리 > 일반 자격증명 제거 > 추가
+인터넷 또는 네트워크주소 : 깃허브 레포지토리 주소 > 내 레포지토리 우측 code버튼을 누르면 copy할 수 있는 레포지토리 주소가 뜬다.
+
+>레포지토리 어떻게 생성?
+- 깃허브 dashboard > 왼쪽 NEW > 레포지토리 이름 입력 > public(다른사람들이 내 레포지토리를 접근할수 있게 하는것) private(비공개, 커밋 잔디심기가 되지않음)>create repository
+
+로컬컴퓨터에 git 세팅 -> 협업하려면 원격저장소에 보관 및 관리를 할 수 있어야 한다.
+> 이 원격저장소가 git-hub.
+
+로컬컴퓨터와 원격저장소를 연결하려면 딱 하나의 루트폴더를 생성해야 한다. (원격저장소와 계속 데이터를 주고받을 폴더)
+
+생성한 루트폴더 > code로 열기 
+
+vscode > 터미널 오픈 (*ctrl + `)
+
+1) git 초기화
+- git init (최초 한번만 하면됨) > .git 폴더 생성확인
+
+2) 나의 로컬 git & 원격 git-hub 연결
+- git remote add origin "내 레포지토리 주소"
+- git remote -v (확인 명령어)
+
+3) staging area 데이터 이동 
+- git add . => 현재 나의 루트폴더 안에 있는 모든 데이터를 staging area
+- git add "파일명 or 폴더명" => 루트폴더 안에 해당 파일 혹은 폴더만 commit
+(*commit => git 버전관리 시스템 혹은 원격저장소에 데이터를 업로드하는 것을 지칭하는 단어이다.)
+
+4) 정상적으로 staging area 데이터 이동여부 확인
+- git status
+
+5) commit을 하기 전, commit하고자 하는 데이터가 어떤 이름으로 되어있는지 기록해야 한다
+지난 과거에 저장해놓았던 데이터를 나중에 찾아올 수도 있기 때문에
+- git commit -m "커밋 메시지 입력(ex.그날 날짜)"
+
+6) 그동안 commit 했던  데이터에 대한 목록을 보여주는 명령어 
+- git log
+
+7) 원격저장소 commit
+- git push origin "브랜치명"
+branch : 레포지토리의 디폴트 폴더, <main / master>
+
+8) 학원에서 git push /
+
+9) 원격저장소 저장데이터 내려받는 방법
+- git pull origin "브랜치명"
+
+10) 원격저장소 1개 (*레포지토리)
+이 레포지토리와 소통을 하고 있는 로컬 git은 2개이기 때문에
+학원에서 push한 데이터와 집에서 push한 데이터를 원격저장소는 구분할 수 없다.
+- 그렇기 때문에 집에서 한 과제를 보내기 전에 먼저 git pull origin "브랜치명"  => 학원에서 작업한, 업데이트된 과제들을 먼저 다운로드 받아야 한다.
+
+11) 학원로컬 / 집로컬 은  아무 상관이 없기 때문에 두개를 연결 시켜줘야 한다. (한번만 해주면 됨.)
+- ★ git pull add origin "브랜치명" --allow-related-histories
+
+12) 특정 브랜치를 생성
+git checkout -b "생성하고 싶은 브랜치명"
+
+13) git checkout master (생성된 브랜치로 이동하고 싶을때)
+
+14) git-hub에 잘못 commit해서 되돌리고 싶을때
+- 로컬컴퓨터 터미널  git-reset HEAD^ : 가장 최근 commit한 데이터를 삭제
+- 로컬컴퓨터 터미널 git push -f origin "브랜치명"
+=> git-hub 브랜치에서도 삭제가 된다.
+
+15) git-hub
+커밋하는 방법 : GUI => 최대용량:25MB / CLI => 최대용량:100MB
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+240617
+* 로컬 / 원격
+로컬 > 내컴퓨터
+원격 > 내컴퓨터 바깥에 있는 데이터 공간(ex피그마)
+
+시작하기 버튼 > 글자수에 따라 달라지는 박스 너비 디테일 좌우 똑같이 맞추기
+constrains > 백그라운드 조절시 footer가 딸려올라가지 않도록 하는 것 bottom > top
+export backgroung > 확장자JPG
+원본데이터 : 좌측 피그마 로고 > file > save local copy > 피그마에서 import로 파일열기
+
+반응형 웹 앱페이지
+웹 사이즈 (*가로 사이즈 에 따라 차이가 생김)
+
+F12 단축키 : 개발자 도구
+
+toggle버튼 / 햄버거 / switch의 역할을 함(on/off)
+
+★vs code 확장프로그램★
+1. 언어설정(확장>korean>설치 / 나중에 영어로 바꾸고싶을땐 '제거'클릭)
+2. 각 프로그래밍 언어 아이콘 material
+3. 배경화면 컬러 테마(one dark)
+4. live server(가상의 공간을 서버화시켜서 실시간으로 보여지는것) : alt + l + o
+안뜰때 : 제어판 찾기 > cmd > IPv4주소 복사 > vscode 확장 라이브서버 > 톱니바퀴 > 확장 설정 > live server> settings : host > 복사한 아이피 주소 붙여넣기
+원하는 브라우저가 안뜰때 : live server > settings : custom browser > chrome
+5. indent rainbow (들여쓰기 설정)
+6. Auto Rename Tag(여는태그 닫는태그 표시)
+> Hyper Text Markup Language
+7. color picker
+8. html css support(오류 체크)
+9. HTML to CSS autocompletion(오타 체크)
+10. code runner
+11. Prettier - Code formatter(코드를 깔끔하게 정리해 주는것)
+> prettier 확장설정 톱니바퀴 > 상단 검색창에 'for'입력 > Editor : Default Formatter >
+ ①prettier로 설정,  스크롤 내려서  ②format on save클릭(ctrlS 누르면 자동으로 적용되도록 하는 기능)
+
+★vs code 기본세팅★
+1. tab size : 2
+2. wrap(스크롤바 초과시 자동 줄바꿈)
+    - 왼쪽 끝 관리(톱니바퀴) > 설정 클릭 > wrap 입력 > Editor: Word Wrap을 on으로 바꾸기
+3. zoom:mouse wheel zoom ON
+4. Auto save delay : 1000 > 500
+5. live server > settings : Full Reload ON
+6. emmet : variables > 항목추가 > lang값 : ko > 확인
+
+html을 활용해서 coding을 시작할 때 2가지 방법
+1) 가장 디테일한 부분부터 코딩작업 시작
+2) 가장 상위요소부터 코딩작업 시작
+
+ul tag : 정렬되지 않는 리스트
+> 자식요소 꺽쇠
+ul>(li>a{쿠킹 클래스})*3 tab누르면 emmet적용
+* emmet적용 안될시 : 곱하기 숫자 지웠다가 다시적고 탭 누르면 됨
+반복적인 텍스트 입력해야할시 : alt누른채로 텍스트 들어갈 자리 클릭
+
+Reset code
+<style>
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+    </style>
+
+style css(라이브서버 스타일 리셋)적용
+: <link(탭) rel="stylesheet" href="./style.css" />
+
+Chef studio 좌우여백, 패딩값 없애기
+: * > 모든 태그 선택
+* {
+  margin: 0;  (m:0)
+  padding: 0;
+  box-sizing: border-box;
+}
+
+CDN : contents delivery network
+구글폰트 > get font > embed font > import태그 > <style>사이 @import링크만 복붙
+
+font
+1) TTF : true type font
+> 애플 + 마이크로소프트 합작폰트
+> 범용적인 문서 및 디자인 작업 / 용량이 작아야함
+> 2차 베지에 곡선 
+
+2) OTF : open type font
+> 어도비 + 마이크로소프트 합작폰트
+> 고화질, 고출력 디자인작업 / 용량이 큼
+> 3차 베지에 곡선
+
+font awesome(figma의 feather icon)
+your kits > settings > easy installation > copy js code
+
+reset.css > reset하고자 하는 속성들만 따로 모아놓음
+
+복제 : 복제하고자 하는 목록 드래그 > alt+Shift+아랫방향화살표
+font weight : 400이 디폴트. 폰트 굵기의 기본값, 작을수록 얇아지고 클수록 두꺼워짐
+
+html5 > 버전
+semantic tag(div태그남발을 막기 위한 유의미한 태그)
+의미론적 요소가 맞는지 검사하고 싶다면 ★MDN WEB DOCS 사이트 방문
+
+
+컴퓨터 운영체제
+1.연산작업, 처리 : 2가지로 이루어짐 => 0,1
+0 : false / 1 : true => 2진수로 동작한다
+비트 : 컴퓨터가 데이터를 처리하는 최소한의 단위
+바이트 : 유의미한 데이터를 저장, 보관, 처리 단위
+비트 * 8개 => 1바이트(2의8승)
+0~255(이 비트값으로 데이터 출력가능)
+
+컬러 구현 및 출력시 : RGB
+R255 G255 B255 => white
+R0 G0 B0 => black
+
+인간 : 10진법 => 10진수
+컴퓨터 : 16진수 ( 0~9, a~f) 16진수의 가장 큰 값:f
+따라서 255(최댓값)가 3개인 white = fff(최댓값3개)
+
+alt => 시각장애인 음성지원 코드
+object-fit: cover; 이미지 비율 고정
+
+nesting 기능
+
+vscode파일을 github에서 여는법 : git bash설치
+
+오늘치 수업내용 : main github에서 다운

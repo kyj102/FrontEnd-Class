@@ -1,0 +1,224 @@
+240619
+1. 반응형
+> width(*너비)값에 반응 : 매체 혹은 기기의 가로사이즈
+a) 가장 작은 사이즈 매체를 기준으로 먼저 UI페이지 제작 => 사이즈 변형
+b) 가장 큰 사이즈 매체를 기준으로 먼저 UI페이지 제작 => 사이즈 변형
+> desktop, tablet, mobile
+> 제품,서비스 제작 기획회의를 할 때 사용자 target / segment / persona 분석
+
+2.메인 서비스를 하고자 하는 매체의 페이지 완성 => 사이즈 변형
+
+ctrl F > 단어로 찾기
+
+.gnb li a {
+position: relative;
+&:hover::before{
+  width: 100%;
+}
+}    ▶ gnb li 에 마우스 오버를 적용했을때 ::before효과가 나오게 하는것
+
+좋은코드 vs 나쁜코드
+> 일회성의 코드 : 나쁜코드
+> 재사용이 가능한 코드 : 좋은코드
+
+/* ====mobile==== */  > 코드의 시작과 끝
+
+@media screen and (max-width: 1190px) and (min-width: 300px) {
+  /*리스트 코드: 위쪽 데탑 navigation주석코드참고
+
+/*목록아이콘없애기 : index navigation heading > <!-- mobile trigger -->주석참고
+
+<div class="trigger">span*3</div>
+
+/* stylecss로돌아가서
+
+.trigger {
+  width: 30px;
+  height: 20px;
+  border: 1px solid #f00;
+  position: relative;(먼저적용)
+}
+
+.trigger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--bg-color-black);
+  position: absolute;(나중적용)
+}
+
+.trigger span:nth-child(1) /*인덱스의 span태그중 1번째
+
+.trigger span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.trigger span:nth-child(2) {
+  top: 50;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.trigger span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+/*trigger border삭제
+
+.trigger {
+display: none;
+}     /* 이 태그를 gnb li a::before, slide사이에 복붙
+
+mobile 주석 밑에서 
+.gnb {
+  display: block;(none에서 block으로 변경)
+}
+
+/* slide */
+.slide_text {
+  width: 100%;
+}
+
+.slide_text_inner {
+  width: 100%;
+}
+
+.slide_text_inner .slide_title {
+  width: 390px;
+  font-size: 28px;
+}
+
+  /* main */
+  #main {
+    flex-direction: column;
+    width: 100%;
+    height: 660px;
+
+    margin: 100px auto;
+  }
+
+  .main_text {
+    align-items: center;
+  }
+
+  .main_info {
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .main_desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* detail */
+  #detail {
+    width: 100%;    > 지금보고있는 화면의 너비값만큼
+  }
+
+  #detail ul {
+    flex-direction: column;   (화면에서의 열맞춤, 줄맞춤: display: flex;)
+    gap: 30px;
+  }
+
+  /*membership */
+  #membership {
+    width: 100%;
+    height: 840px;
+    padding-bottom: 40px;
+  }
+
+  .membership_heading {               /*나중에 삽입
+    font-size: 22px;
+  }
+
+  .membership_menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .membership_type {
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  .membership_type .premium {
+    display: none;
+  }
+
+인덱스 > 프리미엄멤버십아티클 밑에
+<!-- mobile -->
+           <article class="membership_type_pager"></article>
+           <span class="active">1</span>
+           <span>2</span>
+
+/* 푸터,멤버십btn 사이에
+.membership_type_pager {
+  display: none;
+}             > 복붙
+
+다시 mobile맨밑에 복붙하고
+.membership_type_pager {
+    display: flex;         /*none > flex로 변경
+    gap: 10px;
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+  }
+
+  .membership_type_pager span {
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    text-indent: -9999px;
+  }
+
+  .membership_type_pager span.active {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  /* footer */
+  .footer_title {
+    width: 390px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .footer_btn {
+    font-size: 18px;
+    padding: 10px 40px;
+  }
+}
+
+DOM Tree
+Document Oject Model
+문서 객체 모델
+DOM : 웹브라우저가 html로 입력된 코드를 인지하기 위해 문서객체화 시키는 작업
+
+BOM
+Browser Object Model
+
+1. VsCode : 웹에디터
+html & css 언어들로 코드입력
+
+2. 웹브라우저
+- html & css
+- 작성한 코드 순서대로 읽음
+- 동기적 처리방식 (앞에있는 것이 해결되어야 다음으로 넘어가는것)
+- 비동기적 처리방식으로 바꿔줘야함 (스크립트와 코드를 동시에 읽어줘야 하기 때문에)
+
+빈태그 / 홑태그 = 싱글태그
+
+JS 확장프로그램 : Turbo JS
+
+
+
+@media 쿼리 > 미디어 사이즈에 대한 질문과 답
+모바일 시뮬레이터 (배포하기 직전에 사이트에 맞는지 검토하는작업: cross browsing)
+설정 > 브라우저 머리글 바닥글 숨기기
