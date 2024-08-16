@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://cdn.techdaily.co.kr/news/photo/202307/22484_23145_5016.png") center/cover no-repeat;
+}
+
+main {
+  width: 960px;
+  height: 600px;
+  background: rgba($color: #fff, $alpha: 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  h1 {
+    color: #1fb8ff;
+  }
+  #tweetTextArea {
+    width: 100%;
+    height: 80%;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    &:focus {
+      outline: none;
+    }
+  }
+  #tweetButton {
+    font-size: 22px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
+}
