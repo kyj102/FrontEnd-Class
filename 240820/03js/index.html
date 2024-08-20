@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="./script.js"></script>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url("./background.jpg") center/cover no-repeat;
+      #container {
+        width: 500px;
+        height: 400px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        #age {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .ages {
+            .age {
+              padding: 15px 20px;
+              border: none;
+              background: rgba(0, 0, 0, 0.3);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="container">
+    <div id="age">
+      <div class="ages">
+        <button class="20 age">20세 이상</button>
+        <button class="30 age">30세 이상</button>
+        <button class="40 age">40세 이상</button>
+      </div>
+      <div id="result">결과값</div>
+    </div>
+  </main>
+</body>
+</html>
