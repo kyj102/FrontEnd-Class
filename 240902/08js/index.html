@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--anime.js-->
+  <script src="./anime.js"></script>
+  <!--custom js-->
+  <script defer src="./script.js"></script>
+  <title>anime.js 라이브러리 예제 07</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul, li {
+      list-style: none;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #6076d6, #050d30);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .circle {
+        position: absolute;
+        top: calc(50% - 231px);
+        left: calc(50% - 402px);
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+      }
+      .eye {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        left: calc(10% + 300px);
+        top: calc(42% - 10px);
+        animation: ani 1s ease-in-out infinite alternate;
+      }
+      svg {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        width: 800px;
+      }
+    }
+
+    @keyframes ani {
+      0% {
+        height: 20px;
+        transform: skew(0deg);
+      }
+      100% {
+        height: 10px;
+        transform: skew(20deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <div class="eye"></div>
+    <svg class="svg"  viewBox="0 0 982 556">
+        <path d="M520.04 94.3402C207.4 -99.2691 1 47 1 195C1 374.209 98.6985 464.358 153.548 492.359C520.04 647 741.931 485.007 856.615 345C909.343 345 901 367.645 901 397C917 447 945.122 426.356 955.718 414.356C1023.03 318.351 940.136 278.349 890.273 270.349C1015.93 207.946 917 83 856.615 94.3402C806.129 94.3402 781 121 806.129 144.343C879 169 857.862 221.013 839.787 250.348C751.529 363.953 623 158.1 520.04 94.3402Z" />
+    </svg>
+  </section>
+</body>
+</html>
