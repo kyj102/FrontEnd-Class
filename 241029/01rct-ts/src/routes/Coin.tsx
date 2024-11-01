@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useLocation, Outlet } from "react-router-dom";
+import { useParams, useLocation, Outlet, useOutletContext } from "react-router-dom";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useMatch } from "react-router-dom";
@@ -73,9 +73,9 @@ const Tab = styled.span<IsActive>`
   font-size: 14px;
   font-weight: bold;
   background: ${(props) =>
-    props.isActive ? props.theme.textColor : props.theme.accentColor};
+    props.$isActive ? props.theme.textColor : props.theme.accentColor};
   color: ${(props) =>
-    props.isActive ? props.theme.accentColor : props.theme.textColor};
+    props.$isActive ? props.theme.accentColor : props.theme.textColor};
   padding: 8px 0;
   border-radius: 8px;
   transition: background 0.3s, color 0.3s;
@@ -129,7 +129,7 @@ interface PriceData {
 }
 
 interface IsActive {
-  isActive: boolean;
+  $isActive: boolean;
 }
 
 const Coin = () => {
@@ -140,6 +140,7 @@ const Coin = () => {
   const { coinId } = useParams<RouterParams | any>();
   const priceMatch = useMatch("/:coinId/price");
   const chartMatch = useMatch("/:coinId/chart");
+  // const {isDark} = useOutletContext();
 
   // useEffect(() => {
   //   (async () => {
@@ -177,10 +178,11 @@ const Coin = () => {
 
   return (
     <Container>
-      <Header>
         <Helmet>
           <title>{state ? state : loading ? "Loading..." : infoData?.name}</title>
         </Helmet>
+      <Header>
+        <Link to={"/"} />
           <Title>
             {state ? state : loading ? "Loading..." : infoData?.name}
             </Title>
@@ -226,10 +228,10 @@ const Coin = () => {
             </OverviewItem>
           </OverView>
           <Tabs>
-            <Tab isActive={chartMatch !== null}>
+            <Tab $isActive={chartMatch !== null}>
               <Link to={`/${coinId}/chart`}>Chart</Link>
             </Tab>
-            <Tab isActive={priceMatch !== null}>
+            <Tab $isActive={priceMatch !== null}>
               <Link to={`/${coinId}/price`}>Price</Link>
             </Tab>
           </Tabs>
