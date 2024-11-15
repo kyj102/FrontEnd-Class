@@ -1,6 +1,7 @@
 import React from 'react'
-// import { useRouter } from 'next/router';
 import style from "./[id].module.css";
+import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
+import fetchOneBook from '@/lib/fetch-one-boojs';
 
 const mockData = {
   id: 1,
@@ -12,8 +13,22 @@ const mockData = {
   coverImgUrl: "https://shopping-phinf.pstatic.net/main_3888828/38888282618.20230913071643.jpg"
 };
 
-const Index = () => {
-  const {id, title, subTitle, description, author, publisher, coverImgUrl} = mockData;
+export const getServerSideProps = async (context: GetServerSidePropsContext
+  ) => {
+  const id = context.params!.id;
+  const book = await fetchOneBook(Number(id));
+  return {
+    props: {book},
+  };
+};
+
+const Index = ({
+  book,
+  }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+    if(!book) return "문제가 발생했습니다! 다시 시도해주세요";
+  const {
+    id, title, subTitle, description, author, publisher, coverImgUrl
+  } = book;
 
   return (
     <div className={style.container}>

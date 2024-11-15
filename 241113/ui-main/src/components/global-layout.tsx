@@ -6,7 +6,7 @@ const GlobalLayout = ({children} : {children: ReactNode}) => {
   return (
     <div className={style.container}>
       <header className={style.header}>
-        <Link href={"/"}>📚Book List</Link>
+        <Link href={"/"}>🦥 Book List 📕</Link>
       </header>
       <main className={style.main}>{children}</main>
       <footer className={style.footer}>Copyright @YEZI</footer>
