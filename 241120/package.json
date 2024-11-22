@@ -8,17 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyj102/node-reloaded.git"
+    "url": "git+https://github.com/Divjason/node-reloaded.git"
   },
-  "author": "yezi",
+  "author": "David",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kyj102/node-reloaded/issues"
+    "url": "https://github.com/Divjason/node-reloaded/issues"
   },
-  "homepage": "https://github.com/kyj102/node-reloaded#readme",
+  "homepage": "https://github.com/Divjason/node-reloaded#readme",
   "dependencies": {
     "express": "^4.21.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
